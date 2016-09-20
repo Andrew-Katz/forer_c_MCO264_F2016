@@ -55,5 +55,10 @@ public class Monomial
     
   //</editor-fold>
     
+    public String Show()
+    {
+        String strRV = String.format("%.2f x^ %d", coeffi,degree);
+        return strRV;
+    }
     
 }
