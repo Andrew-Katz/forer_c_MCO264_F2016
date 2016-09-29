@@ -55,5 +55,27 @@ public class PolynomialsDemo
           polynomial.Drop(monomial_0);
           strPoly = polynomial.Show();
           System.out.println("dropped degree 0: |" + strPoly +"|");
+          
+          Monomial monomial_4 = new Monomial(4, 4.4);
+          polynomial.Insert(monomial_4);
+          strPoly = polynomial.Show();
+          System.out.println("inserted 4.4x^4: |" + strPoly +"|");
+          
+          polynomial.Insert(monomial_0);
+          strPoly = polynomial.Show();
+          System.out.println("inserted 0.5: |" + strPoly +"|");
+          
+          polynomial.Insert(monomial_3);
+          strPoly = polynomial.Show();
+          System.out.println("inserted 3.3x^3: |" + strPoly +"|");
+
+          polynomial.Insert(monomial_5);
+          strPoly = polynomial.Show();
+          System.out.println("inserted 5.5x^5: |" + strPoly +"|");
+          
+          Monomial monomial_2 = new Monomial(2, 2.2);
+          polynomial.Insert(monomial_2);
+          strPoly = polynomial.Show();
+          System.out.println("inserted 2.2x^2: |" + strPoly +"|");
    }
 }

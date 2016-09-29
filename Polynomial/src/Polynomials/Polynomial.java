@@ -91,9 +91,16 @@ public class Polynomial
             if (blnRV)   
             {
                 int place = Locate(mon,true);
-                if (CopyMonomialsArray(poly,place+1, poly, place, inUse-place))
+                if(place == -1)
+                {
+                    poly[0].setDegree(mon.getDegree());
+                    poly[0].setCoeffi(mon.getCoeffi());
+                    ++inUse;
+                }
+                else if (CopyMonomialsArray(poly,place+1, poly, place, inUse-place))
                 {
                     poly[place] = mon;
+                    ++inUse;
                 }
                 else
                 {
