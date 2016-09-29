@@ -45,6 +45,10 @@ public class Polynomial
             {
                 intRV = ix;
             }
+          }
+        else
+        {
+            intRV = 0;
         }
         return intRV;
     }
