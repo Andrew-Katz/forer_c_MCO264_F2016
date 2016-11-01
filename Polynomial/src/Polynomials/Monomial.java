@@ -1,23 +1,22 @@
-/*
- *  A copyright might go here....
- */
+
 package Polynomials;
 
-
-/*-----------------------------------------
-    used to represents objects
-    of the type ax^n:
-        degree = n (non-negative integer)
-        coefficient = a (real number)
--------------------------------------------*/
+ 
 public class Monomial
 {
+
     // <editor-fold  desc="private members">
     private int     degree;
     private double  coeffi;
     //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc="constructors">
+    Monomial(Monomial mono)
+    {
+        degree = mono.degree;
+        coeffi = mono.coeffi;
+    }
+
     Monomial(int degr, double coef)
     {
         degree = degr;
@@ -52,7 +51,7 @@ public class Monomial
     }
     //</editor-fold>
     
-    public String Show()
+    public String toString()
     {
         String strRV = "";
         strRV = String.format("%.2fx^%d", coeffi, degree);
@@ -73,4 +72,5 @@ public class Monomial
         }
         return intRV;
     }
+    
 }
